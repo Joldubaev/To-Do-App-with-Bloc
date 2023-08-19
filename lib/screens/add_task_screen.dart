@@ -14,6 +14,7 @@ class AddTaskScreen extends StatelessWidget {
     TextEditingController titleController = TextEditingController();
     return Container(
       padding: const EdgeInsets.all(20),
+      
       child: Column(
         children: [
           const Text(
