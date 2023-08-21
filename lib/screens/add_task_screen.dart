@@ -14,7 +14,6 @@ class AddTaskScreen extends StatelessWidget {
     TextEditingController titleController = TextEditingController();
     return Container(
       padding: const EdgeInsets.all(20),
-      
       child: Column(
         children: [
           const Text(
@@ -39,9 +38,8 @@ class AddTaskScreen extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () {
-                  var task = Task(
-                    id: GUIDGen.generate(),
-                    title: titleController.text);
+                  var task = Tasks(
+                      id: GUIDGen.generate(), title: titleController.text);
                   context.read<TasksBloc>().add(
                         AddTask(task: task),
                       );

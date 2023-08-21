@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:to_do_app/blocs/bloc_exports.dart';
 import 'package:to_do_app/screens/app_them.dart';
-import 'package:to_do_app/screens/task_screen.dart';
+import 'package:to_do_app/screens/tab_screen.dart';
 import 'package:to_do_app/widgets/app_router.dart';
 
 void main() async {
@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             theme: state.switchValue
                 ? AppThemes.appThemeData[AppTheme.darkTheme]
                 : AppThemes.appThemeData[AppTheme.lightTheme],
-            home: const TaskScreen(),
+            home:  const TabScreen(),
             onGenerateRoute: appRouter.onGenerateRoute,
           );
         },

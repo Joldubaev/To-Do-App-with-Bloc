@@ -1,11 +1,11 @@
 import 'package:equatable/equatable.dart';
 
-class Task extends Equatable {
+class Tasks extends Equatable {
   final String title;
   final String id;
   bool? isDone;
   bool? isDelete;
-  Task({
+  Tasks({
     required this.title,
     required this.id,
     this.isDone,
@@ -15,13 +15,13 @@ class Task extends Equatable {
     isDelete = isDelete ?? false;
   }
 
-  Task copyWith({
+  Tasks copyWith({
     String? title,
     String? id,
     bool? isDone,
     bool? isDelete,
   }) {
-    return Task(
+    return Tasks(
       title: title ?? this.title,
       id: id ?? this.id,
       isDone: isDone ?? this.isDone,
@@ -38,8 +38,8 @@ class Task extends Equatable {
     };
   }
 
-  factory Task.fromMap(Map<String, dynamic> map) {
-    return Task(
+  factory Tasks.fromMap(Map<String, dynamic> map) {
+    return Tasks(
       title: map['title'] ?? '',
       id: map['id'] ?? '',
       isDone: map['isDone'],

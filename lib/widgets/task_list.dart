@@ -10,7 +10,7 @@ class TaskLists extends StatelessWidget {
     required this.taskList,
   });
 
-  final List<Task> taskList;
+  final List<Tasks> taskList;
 
   @override
   Widget build(BuildContext context) {
@@ -27,4 +27,3 @@ class TaskLists extends StatelessWidget {
 
   void add(AddTask addTask) {}
 }
-
