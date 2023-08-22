@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_app/screens/recylce_bin.dart';
 import 'package:to_do_app/screens/tab_screen.dart';
 import '../blocs/bloc_exports.dart';
 
@@ -38,7 +39,7 @@ class MyDrawer extends StatelessWidget {
               builder: (context, state) {
                 return GestureDetector(
                   onTap: () =>
-                      Navigator.of(context).pushReplacementNamed(TabScreen.id),
+                      Navigator.of(context).pushReplacementNamed(RecycleBin.id),
                   child: ListTile(
                     leading: const Icon(Icons.delete),
                     title: const Text('Bin'),
